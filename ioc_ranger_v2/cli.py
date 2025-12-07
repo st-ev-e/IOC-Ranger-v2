@@ -328,7 +328,9 @@ async def handle_hash(client: httpx.AsyncClient, h: str, settings) -> MixedRow:
     except Exception as e:
         notes.append(f"URLScan error: {_scrub_error(e, settings)}")
 
-    cache_set(key, base.__dict__)
+    # Only cache if there is a key to fetch data, to avoid poisoning cache with empty results
+    if settings.vt_api_key:
+        cache_set(key, base.__dict__)
     return MixedRow(kind="hash", data=base, notes=notes)
 
 

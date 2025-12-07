@@ -18,6 +18,9 @@ A fast, colorful, and extensible IOC checker for **hashes, IPs, domains, and URL
 - **ThreatFox**: Threat confidence and type
 - **URLScan.io**: Page screenshots and risk scores
 
+<img width="1643" height="602" alt="image" src="https://github.com/user-attachments/assets/877ddf32-e784-4d67-863d-a33af9b0e87f" />
+
+
 ## Table of contents
 - [Features](#features)
 - [Quickstart](#quickstart)
@@ -46,33 +49,35 @@ A fast, colorful, and extensible IOC checker for **hashes, IPs, domains, and URL
 ### Windows (CMD)
 ```bat
 git clone https://github.com/UserAaronVzla/IOC-Ranger-v2
-cd IOC-Ranger
+cd IOC-Ranger-v2
 python -m venv .venv && call .venv\Scripts\activate.bat
 python -m pip install -r requirements.txt
 copy .env.example .env  &  notepad .env   :: fill keys
-python -m ioc_ranger -t mixed -i inputs\iocs_mixed.txt -f table
+python -m ioc_ranger_v2 -t mixed -i inputs\iocs_mixed.txt -f table
 ```
 
 
 ### macOS/Linux
 ```bash
 git clone https://github.com/UserAaronVzla/IOC-Ranger-v2
-cd IOC-Ranger
+cd IOC-Ranger-v2
 python -m venv .venv && source .venv/bin/activate
 python -m pip install -r requirements.txt
 cp .env.example .env && $EDITOR .env
-python -m ioc_ranger -t mixed -i inputs/iocs_mixed.txt -f table
+python -m ioc_ranger_v2 -t mixed -i inputs/iocs_mixed.txt -f table
 ```
 
 
 ## Usage
 ```bash
-python -m ioc_ranger --help
+python -m ioc_ranger_v2 --help
+
 # Common Interactive:
-python -m ioc_ranger
+python -m ioc_ranger_v2
+
 # Common Noninteractive:
-python -m ioc_ranger -t hashes -i inputs/hashes.txt -f table csv
-python -m ioc_ranger -t mixed  -i inputs/iocs_mixed.txt -o outputs/results -f table csv json html
+python -m ioc_ranger_v2 -t hashes -i inputs/hashes.txt -f table csv
+python -m ioc_ranger_v2 -t mixed  -i inputs/iocs_mixed.txt -o outputs/results -f table csv json html
 ```
 
 
@@ -94,6 +99,8 @@ CACHE_TTL=86400
 - **Hashes file** → show a real snippet of output table and a link to VT GUI from CSV.
 - **IPs file** → highlight AbuseIPDB score + IPQS VPN/Proxy flags.
 - **Mixed file** → show how types are auto-detected.
+
+<img width="1901" height="285" alt="image" src="https://github.com/user-attachments/assets/69a595a2-6bac-4786-aa45-58b855d6dc01" />
 
 
 ## Roadmap

@@ -259,21 +259,11 @@ async def handle_hash(client: httpx.AsyncClient, h: str, settings) -> MixedRow:
     VirusTotal (v3) + AlienVault + ThreatFox for file hash.
     """
     key = f"vt:{h}"
-    # We might want to cache the combined result, but for now let's keep VT caching logic
-    # and maybe add others. To keep it simple, I'll fetch fresh for new services or update cache logic later.
-    # For this iteration, I'll just fetch VT from cache if available, and others fresh (or implement full caching later).
-
-    # Actually, to avoid complexity, let's just fetch everything if not cached, or fetch missing parts.
-    # But the current cache stores the whole HashResult.
-    # If I add fields, old cache entries won't have them.
-    # I should probably invalidate cache or just accept that old cache entries are partial.
 
     base = HashResult(ioc=h)
     cached = cache_get(key, settings.cache_ttl)
     if cached:
         base = HashResult(**cached)
-        # If we want to enrich cached data with new services, we can do it here.
-        # But let's assume if it's cached, we return it.
         # To force update, user can clear cache (delete file).
         return MixedRow(kind="hash", data=base, notes=["cache"])
 
@@ -539,11 +529,6 @@ async def handle_url(client: httpx.AsyncClient, url: str, settings) -> MixedRow:
     except Exception as e:
         notes.append(f"URLScan error: {_scrub_error(e, settings)}")
 
-    # AlienVault (using domain or hostname might be better, but let's try generic)
-    # OTX doesn't have a great URL endpoint for pulses, but we can try 'url' type if supported,
-    # or just skip. For now, I'll skip OTX for URLs to avoid noise, or check domain of URL.
-    # Let's skip OTX for full URLs for now.
-
     # ThreatFox
     try:
         tf_res = await threatfox_search(client, settings.threatfox_key, url)
@@ -555,6 +540,6 @@ async def handle_url(client: httpx.AsyncClient, url: str, settings) -> MixedRow:
     return MixedRow(kind="url", data=base, notes=notes)
 
 
-# Entry point when executed as a module via `python -m ioc_ranger`
+# Entry point when executed as a module via `python -m ioc_ranger_v2`
 if __name__ == "__main__":
     app()

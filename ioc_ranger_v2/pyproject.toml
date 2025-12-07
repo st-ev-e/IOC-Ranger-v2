@@ -37,8 +37,8 @@ dev = [
 ioc-ranger = "ioc_ranger.cli:app"
 
 [project.urls]
-"Homepage" = "https://github.com/UserAaronVzla/IOC-Ranger"
-"Bug Tracker" = "https://github.com/UserAaronVzla/IOC-Ranger/issues"
+"Homepage" = "https://github.com/UserAaronVzla/IOC-Ranger-v2"
+"Bug Tracker" = "https://github.com/UserAaronVzla/IOC-Ranger-v2/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]

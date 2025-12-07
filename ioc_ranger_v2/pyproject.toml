@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ioc-ranger"
+name = "ioc-ranger-v2"
 version = "2.0.0"
 description = "A fast, colorful, and extensible IOC checker for hashes, IPs, domains, and URLs."
 readme = "README.md"
@@ -34,7 +34,7 @@ dev = [
 ]
 
 [project.scripts]
-ioc-ranger = "ioc_ranger.cli:app"
+ioc-ranger-v2 = "ioc_ranger.cli:app"
 
 [project.urls]
 "Homepage" = "https://github.com/UserAaronVzla/IOC-Ranger-v2"

